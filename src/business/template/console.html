@@ -1,0 +1,53 @@
+<div class="skin-blue sidebar-mini sidebar-open sidebar-collapse">
+  <div class="main-sidebar">
+    <img src="/business/images/adminlte/user1-128x128.jpg" class="img-circle logo" alt="User Image">
+    <!-- Inner sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+        <!-- Optionally, you can add icons to the links -->
+        <li class="treeview" ng-repeat="menu in menus track by $index" ng-click="selectMenu($event, menu)" ng-class="{'active': menu === formData.selectedMenu1 || menu.hover}">
+          <a href="#">
+            <i class="{{menu.clazz || 'fa fa-circle-o'}}"></i>
+            <br>
+            <span>{{menu.name}}</span>
+          </a>
+        </li>
+      </ul>
+      
+      <ul class="sidebar-menu sidebar-menu-bottom">
+        <li class="treeview">
+          <a href="">
+            <i class="fa fa-list-alt"></i>
+            <br>
+            <span>工作空间</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="">
+            <i class="fa fa-question-circle"></i>
+            <br>
+            <span>帮助</span>
+          </a>
+        </li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </div>
+  <!-- /.main-sidebar -->
+
+  <div class="content-wrapper" content-wrapper-min-height>
+    <section class="panel-wrapper">
+      <section class="left-panel">
+        <section ui-view></section>
+        <div class="resize-bar" sn-resize-bar min-width="200" max-width="400" bar-side="right"></div>
+      </section>
+      <section class="main-panel">
+      </section>
+      <section class="right-panel">
+        <div class="resize-bar" sn-resize-bar min-width="200" max-width="400" bar-side="left"></div>
+      </section>
+    </section>
+  </div>
+  <aside></aside>

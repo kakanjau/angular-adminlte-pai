@@ -1,0 +1,13 @@
+<!--<script id="checkboxTreeTpl" type="text/html">-->
+  <ul class="sn-tree" class="dropdown-menu">
+    <li ng-repeat="node in treeData">
+      <i class="node-checkbox" ng-class="state(node)" ng-click="iconClick(node)"></i>
+      <input type="checkbox" ng-model="node.checked" ng-click="itemCheck(node)" ng-if="node.type !== 0" ng-disabled="treeParent&&!treeParent.checked" />
+      <i ng-class="type(node)" ng-click="itemClick(node)"></i>
+      <span ng-click="iconClick(node)" sn-tooltip="{{node.description}}">
+        {{node.name}}
+      </span>
+      <sn-tree tree-data="node.children" tree-parent="node" ng-hide="node.children && node.$collapsed"></sn-tree>
+    </li>
+  </ul>
+<!--</script>-->

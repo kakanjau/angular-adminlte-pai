@@ -1,0 +1,41 @@
+body {font-family: "Microsoft YaHei",Arial,"Helvetica Neue",Helvetica,sans-serif !important;}
+
+.content-wrapper {
+  position: relative;
+}
+.content-wrapper .panel-wrapper {
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: 0;
+  left: 200px;
+  right: 0;
+  height: 100%;
+}
+.content-wrapper > .panel-wrapper > .left-panel {
+  position: absolute;
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width:200px;
+  margin-left: -200px;
+  border-right: 1px solid #e7e7e7;
+}
+.content-wrapper > .panel-wrapper > .main-panel {
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 200px;
+}
+.content-wrapper > .panel-wrapper > .right-panel {
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: 0;
+  right: 0px;
+  width:200px;
+  background: #f5f5f5;
+}
