@@ -39,3 +39,62 @@ body {font-family: "Microsoft YaHei",Arial,"Helvetica Neue",Helvetica,sans-serif
   width:200px;
   background: #f5f5f5;
 }
+
+.content-wrapper > .panel-wrapper > .main-panel header {
+  position: absolute;
+  height: 40px;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.901961);
+}
+
+.content-wrapper > .panel-wrapper > .main-panel header > .dropdown {
+  display: inline-block;
+  margin: 5px auto;
+  position: absolute;
+  left: 40%;
+  margin: 0;
+}
+
+.content-wrapper > .panel-wrapper > .main-panel header > .tools {
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: inline-block;
+  text-align: right;
+}
+
+.content-wrapper > .panel-wrapper > .main-panel header .btn {
+  height: 30px;
+  margin-top: 5px;
+  padding-top: 4px;
+}
+
+.content-wrapper > .panel-wrapper > .main-panel .status {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  font-size: 12px;
+  
+}
+
+.content-wrapper > .panel-wrapper > .main-panel footer {
+  position: absolute;
+  height: 40px;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.901961);
+  text-align: center;
+}
+
+.content-wrapper > .panel-wrapper > .main-panel footer > .btn-app {
+  padding: 5px;
+  height: 30px;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.content-wrapper > .panel-wrapper > .main-panel footer > .btn-app > i {
+  font-size: 12px;
+  display: inline-block;
+}

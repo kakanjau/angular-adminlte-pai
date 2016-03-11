@@ -1,0 +1,52 @@
+<div ng-controller="PaiWorkSpaceCtrl">
+  <header>
+    <div class="dropdown" sn-dropdown="">
+      <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      最近打开
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a>1</a></li>
+        <li><a>2</a></li>
+        <li><a>3</a></li>
+      </ul>
+    </div>
+    <div class="tools">
+      <a class="btn btn-default" sn-tooltip="放大">
+        <i class="fa fa-search-plus"></i>
+      </a>
+      <a class="btn btn-default" sn-tooltip="缩小">
+        <i class="fa fa-search-minus"></i>
+      </a> 
+      <a class="btn btn-default" sn-tooltip="适应画布">
+        <i class="fa fa-compress"></i>
+      </a>
+      <a class="btn btn-default" sn-tooltip="实际尺寸">
+        <i class="fa fa-arrows-alt"></i>
+      </a>
+      <a class="btn btn-default disabled" style="border:none; padding: 4px;">
+        |
+      </a>
+      <a class="btn btn-default" sn-tooltip="移动画布" ng-class="{'active': btn.movePanel}" ng-click="btn.movePanel = true; btn.selectNodes = false;">
+        <i class="fa fa-hand-rock-o"></i>
+      </a>
+      <a class="btn btn-default" sn-tooltip="选择节点" ng-class="{'active': btn.selectNodes}" ng-click="btn.selectNodes = true; btn.movePanel = false;">
+        <i class="fa fa-mouse-pointer"></i>
+      </a>
+    </div>
+  </header>
+  <artical>
+
+  </artical>
+  <div class="status">
+    开始时间：{{}} 耗时：{{}} {{}}
+  </div>
+  <footer>
+    <a class="btn btn-app">
+      <i class="fa fa-play"></i> 运行
+    </a>
+    <a class="btn btn-app">
+      <i class="fa fa-repeat"></i> 恢复执行
+    </a>
+  </footer>
+</div>

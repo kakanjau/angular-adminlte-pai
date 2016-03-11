@@ -1,4 +1,4 @@
-let ConsoleCtrl = function ($scope, $state) {
+let ConsoleCtrl = function ($scope, $state, $rootScope) {
   let vm = $scope;
   let globals = {
     stateAndMenus: {}
@@ -125,10 +125,9 @@ let ConsoleCtrl = function ($scope, $state) {
     reCfgMenus(vm.menus, null, 1);
     bulidStateAndMenuInfo(vm.menus, globals.stateAndMenus);
     locateMenu($state.current);
-
     vm.now = new Date;
   }
 }
 
-ConsoleCtrl.$injector = ['$scope', '$state'];
+ConsoleCtrl.$injector = ['$scope', '$state', '$rootScope'];
 export default app => app.controller('ConsoleCtrl', ConsoleCtrl);

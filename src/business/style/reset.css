@@ -2,10 +2,11 @@
   padding-top: 10px;
 }
 .sidebar-mini.sidebar-collapse .main-sidebar img.logo {
-  max-width: 90%;
+  max-width: 70%;
   margin: 0 auto;
   display: block;
 }
+
 .skin-blue .sidebar-menu > li > a {
   border-left: none;
   text-align: center;
@@ -41,4 +42,9 @@
 .skin-blue .sidebar-menu.sidebar-menu-bottom {
   position: absolute;
   bottom: 10px;
+  width: 100%;
+}
+
+.btn-default {
+  background-color: inherit;
 }

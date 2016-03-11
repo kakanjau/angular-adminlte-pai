@@ -1,5 +1,5 @@
 <div class="skin-blue sidebar-mini sidebar-open sidebar-collapse">
-  <div class="main-sidebar">
+  <div class="main-sidebar" style="width: 55px !important;">
     <img src="/business/images/adminlte/user1-128x128.jpg" class="img-circle logo" alt="User Image">
     <!-- Inner sidebar -->
     <div class="sidebar">
@@ -44,8 +44,10 @@
         <div class="resize-bar" sn-resize-bar min-width="200" max-width="400" bar-side="right"></div>
       </section>
       <section class="main-panel">
+       <div ng-include="'business/template/paiWorkspace.html'"></div>
       </section>
       <section class="right-panel">
+        <sn-prop-panel></sn-prop-panel>
         <div class="resize-bar" sn-resize-bar min-width="200" max-width="400" bar-side="left"></div>
       </section>
     </section>

@@ -4,13 +4,13 @@ export default app => {
     $stateProvider
     .state('Console', {
       abstract: true,
-      templateUrl: 'business/template/console.html',
       controller: 'ConsoleCtrl',
+      templateUrl: 'business/template/console.html',
     })
     .state('Console.Search', {
       url: '/search',
+      controller: 'SearchCtrl',
       templateUrl: 'business/template/search.html',
-      controller: 'SearchCtrl'
     })
     ;
   }]);

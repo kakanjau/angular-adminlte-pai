@@ -60,6 +60,7 @@ export default app => {
   app.directive("snResizeBar", [() => {
     return {
       restrict: 'A',
+      priority: 0,
       link: (scope, ele, attr) => {
         // 判断拖动条是在左侧还是右侧
         let isLeftBar = attr.barSide == 'left';
@@ -113,7 +114,7 @@ export default app => {
           let distance = isLeftBar ? (startPos - evt.x) : (evt.x -  startPos);
           if(distance >= minDistance && distance <= maxDistance) {
             parentEle.style.width = (originWidth + distance) + 'px';
-            siblingEle.style[isLeftBar ? 'right' : 'left'] = (siblingOriginMove + distance) + 'px';
+            siblingEle.style[isLeftBar ? 'right' : 'left'] = ((siblingOriginMove||0) + distance) + 'px';
             distance && siblingEle.dispatchEvent(event);
           }
         };
