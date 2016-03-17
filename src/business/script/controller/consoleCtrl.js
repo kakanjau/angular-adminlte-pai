@@ -11,15 +11,15 @@ let ConsoleCtrl = function ($scope, $state, $rootScope) {
       clazz: 'fa fa-search'
     }, {
       name: '实验',
-      // state: 'Console.Search',
+      state: 'Console.ToolBox.Experiment',
       clazz: 'fa fa-balance-scale'
     }, {
       name: '数据源',
-      // state: 'Console.Search',
+      state: 'Console.ToolBox.Datasource',
       clazz: 'fa fa-database'
     }, {
       name: '组件',
-      // state: 'Console.Search',
+      state: 'Console.ToolBox.Component',
       clazz: 'fa fa-cubes'
     }, {
       name: '模型',
@@ -40,7 +40,8 @@ let ConsoleCtrl = function ($scope, $state, $rootScope) {
       stateParam = menuItem.param;
     if (stateName) {
       //当使用reload:true时会重新生成一个scope,init方法都会再次执行
-      $state.go(menuItem.state, stateParam, { reload: true });
+      $state.go(menuItem.state, stateParam);
+      selectedMenu(menuItem.state);
     } else {
       if (formData['selectedMenu' + menuItem.level] === menuItem) {
         formData['selectedMenu' + menuItem.level] = null;

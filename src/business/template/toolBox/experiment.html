@@ -1,0 +1,26 @@
+<div class="toolbox-content-wrap">
+  <div class="table-content">
+    <table class="table table-striped table-hover experiment">
+      <tr ng-repeat="exp in vm.experimentList" ng-if="vm.canNodeShow(exp)" ng-class="{'active': vm.curExp == exp}" ng-init="menuData = {node: exp, list: vm.experimentList}">
+        <td ng-show="exp.isBranch" ng-click="exp.showChildren = !exp.showChildren" ng-style="{'padding-left': (exp.level*15+10)+'px'}" context-menu="/business/template/toolBox/experimentFolderMenu.html" context-menu-data="menuData">
+          <span ng-show="exp.showChildren">
+            <i class="fa fa-caret-down"></i><i class="fa fa-folder-open-o"></i>
+          </span>
+          <span ng-hide="exp.showChildren">
+            <i class="fa fa-caret-right"></i><i class="fa fa-folder-o"></i>
+          </span>
+          {{exp.name}}
+        </td>
+        <td ng-show="!exp.isBranch" ng-style="{'padding-left': (exp.level*15+10)+'px'}" ng-click="vm.curExp = exp;" context-menu="/business/template/toolBox/experimentFileMenu.html" context-menu-data="menuData">
+          <span>
+            <i class="fa fa-balance-scale"></i>
+            {{exp.name}}
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="text-center button-area">
+    <a class="btn btn-default">新建实验</a>
+  </div>
+</div>

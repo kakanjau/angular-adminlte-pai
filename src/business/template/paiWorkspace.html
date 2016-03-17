@@ -1,4 +1,4 @@
-<div ng-controller="PaiWorkSpaceCtrl">
+<div ng-controller="PaiWorkSpaceCtrl" class="pai-workspace" ng-drop="{{vm.canDrop}}" ng-drop-success="vm.onDropComplete($data,$event)">
   <header>
     <div class="dropdown" sn-dropdown="">
       <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

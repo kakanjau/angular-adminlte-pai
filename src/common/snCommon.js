@@ -6,6 +6,7 @@ import http from './httpServer/httpServer';
 
 // 功能组件部分，根据需要确认是否加载
 import tree from './tree/tree';
+import treeToListService from './tree/treeToListService';
 // import markdown from './markdown/markdown';
 import dropdown from './dropdown/dropdown';
 // import preview from './preview/preview';
@@ -14,6 +15,8 @@ import dropdown from './dropdown/dropdown';
 import inputMask from './inputMask/inputMask';
 import select2 from './select2/select2';
 import tooltip from './tooltip/tooltip';
+import contextmenu from './contextmenu/contextmenu';
+import draggable from './draggable/draggable';
 
 let app = angular.module("sn.common", []);
 
@@ -23,6 +26,7 @@ INCLUDE_ALL_MODULES(
     modal, 
     http, 
     tree, 
+    treeToListService,
     // markdown,
     dropdown, 
     // preview, 
@@ -30,7 +34,9 @@ INCLUDE_ALL_MODULES(
     // dateRangePicker, 
     inputMask, 
     select2, 
-    tooltip
+    tooltip,
+    contextmenu,
+    draggable
   ], 
   app);
 

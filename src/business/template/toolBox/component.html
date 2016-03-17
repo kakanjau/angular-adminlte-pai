@@ -1,0 +1,27 @@
+<div class="toolbox-content-wrap">
+  <div class="table-content">
+    <table class="table table-striped table-hover drag-object">
+      <tr ng-repeat="comp in vm.componentList" ng-if="vm.canNodeShow(comp)" ng-class="{'active': vm.curComp == comp}" ng-init="menuData = {node: comp, list: vm.componentList}">
+        <td ng-show="comp.isBranch" ng-click="comp.showChildren = !comp.showChildren" ng-style="{'padding-left': (comp.level*15+10)+'px'}">
+          <span ng-show="comp.showChildren">
+            <i class="fa fa-caret-down"></i><i class="fa fa-folder-open-o"></i>
+          </span>
+          <span ng-hide="comp.showChildren">
+            <i class="fa fa-caret-right"></i><i class="fa fa-folder-o"></i>
+          </span>
+          {{comp.name}}
+        </td>
+        <td ng-show="!comp.isBranch" ng-style="{'padding-left': (comp.level*15+10)+'px'}" ng-click="vm.curComp = comp;" context-menu="/business/template/toolBox/componentMenu.html" context-menu-data="menuData" >
+          <span ng-drag="true" ng-drag-data="comp" allow-transform="false">
+            <i class="fa fa-balance-scale"></i>
+            {{comp.name}}
+          </span>
+          <span ng-drag-clone="" ng-show="comp==clonedData">
+            <i class="fa fa-balance-scale"></i>
+            {{clonedData.name}}
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

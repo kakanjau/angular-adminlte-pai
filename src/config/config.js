@@ -63,7 +63,7 @@ export default app => {
         });
 
         $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-          
+          $rootScope.$broadcast('router:state:change', toState);
         });
         
         $rootScope.$on('$locationChangeSuccess', function(evt, newUrl, oldUrl) {
