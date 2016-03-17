@@ -2,7 +2,7 @@ let PaiWorkSpaceCtrl = ($scope) => {
   let vm = $scope.vm = {};
   vm.canDrop = true;
   vm.onDropComplete = (data, evt) => {
-    let artical = evt.event.target;
+    let artical = evt.element[0];
     let rect = artical.getBoundingClientRect();
     let relativePos = {
       left: evt.tx - rect.left,

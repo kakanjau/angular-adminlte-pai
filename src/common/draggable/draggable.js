@@ -343,8 +343,9 @@ export default app => {
                         if (attrs.ngDropSuccess) {
                             obj.hasReset = true;
                             reset(obj, false);
+                            obj.element = element;
                             $timeout(function(){
-                                onDropCallback(scope, {$data: obj.data, $event: obj, $target: scope.$eval(scope.value)});
+                                onDropCallback(scope, {$data: obj.data, $event: obj, $element: element, $target: scope.$eval(scope.value)});
                             });
                         }
                         
